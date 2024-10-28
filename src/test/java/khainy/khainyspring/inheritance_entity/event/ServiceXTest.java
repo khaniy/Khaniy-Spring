@@ -1,19 +1,12 @@
-package khainy.khainyspring.service.event;
+package khainy.khainyspring.inheritance_entity.event;
 
 import khainy.khainyspring.spring_event.event.AsyncEventX;
-import khainy.khainyspring.spring_event.event.EventX;
-import khainy.khainyspring.spring_event.service.ServiceA;
-import khainy.khainyspring.spring_event.service.ServiceB;
-import khainy.khainyspring.spring_event.service.ServiceC;
 import khainy.khainyspring.spring_event.service.ServiceX;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.event.ApplicationEvents;
 import org.springframework.test.context.event.RecordApplicationEvents;
 
