@@ -2,7 +2,7 @@ package khainy.khainyspring.inheritance_entity.repository;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import khainy.khainyspring.inheritance_entity.repository.entity.ParentEntity;
-import khainy.khainyspring.inheritance_entity.repository.entity.QDogEntity;
+import khainy.khainyspring.inheritance_entity.repository.entity.QChildEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +11,10 @@ import org.springframework.stereotype.Service;
 public class ParentQRepository {
 
     private final JPAQueryFactory queryFactory;
-    private static final QDogEntity DOG = QDogEntity.dogEntity;
+    private static final QChildEntity CHILD = QChildEntity.childEntity;
 
     public ParentEntity findDog(Long id) {
-        return queryFactory.selectFrom(DOG).where(DOG.id.eq(id)).fetchOne();
+        return queryFactory.selectFrom(CHILD).where(CHILD.id.eq(id)).fetchOne();
     }
 
 
